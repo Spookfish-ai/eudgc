@@ -1,13 +1,13 @@
 {
-  "name": "eudgc",
+  "name": "@kenai/eudgc",
   "version": "1.0.6",
   "description": "EuDGC (European Digital Green Certificate) handling in Javascript and Typescript",
-  "main": "dist/eudgc.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "watch": "npx webpack serve --mode=development",
-    "serve": "npx webpack serve --mode=development",
-    "build": "npx webpack --mode=production && cp dist/eudgc.js docs",
-    "prepublishOnly": "npx webpack --mode=production && cp dist/eudgc.js docs",
+    "dev": "tsup src/index.ts --format cjs --watch --dts",
+    "build": "tsup src/index.ts --format cjs --dts && cp dist/eudgc.js docs",
+    "prepublishOnly": "tsup src/index.ts --format cjs --dts && cp dist/eudgc.js docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -26,10 +26,12 @@
     "base45": "^3.0.0",
     "bignumber.js": "^9.0.1",
     "browserify-zlib": "^0.2.0",
-    "cbor-web": "^7.0.5",
+    "cbor": "^8.1.0",
+    "cbor-web": "^8.1.0",
     "crypto-browserify": "^3.12.0",
     "process": "^0.11.10",
     "stream-browserify": "^3.0.0",
+    "tsup": "^5.11.11",
     "util": "^0.12.4"
   },
   "devDependencies": {
