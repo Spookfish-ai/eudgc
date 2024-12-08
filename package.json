@@ -1,13 +1,13 @@
 {
-  "name": "@kenai/eudgc",
+  "name": "@Spookfish-ai/eudgc",
   "version": "1.0.6",
   "description": "EuDGC (European Digital Green Certificate) handling in Javascript and Typescript",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "tsup src/index.ts --format cjs --watch --dts",
-    "build": "tsup src/index.ts --format cjs --dts && cp dist/eudgc.js docs",
-    "prepublishOnly": "tsup src/index.ts --format cjs --dts && cp dist/eudgc.js docs",
+    "build": "tsup src/index.ts --format cjs --dts && cp dist/index.js docs/eudgc.js",
+    "prepublishOnly": "tsup src/index.ts --format cjs --dts && cp dist/index.js docs/eudgc.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -47,6 +47,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Scopevisio/eudgc"
+    "url": "https://github.com/Spookfish-ai/eudgc.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
