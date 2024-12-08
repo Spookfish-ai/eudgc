@@ -6,8 +6,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "tsup src/index.ts --format cjs --watch --dts",
-    "build": "tsup src/index.ts --format cjs --dts && cp dist/eudgc.js docs",
-    "prepublishOnly": "tsup src/index.ts --format cjs --dts && cp dist/eudgc.js docs",
+    "build": "tsup src/index.ts --format cjs --dts && cp dist/index.js docs/eudgc.js",
+    "prepublishOnly": "tsup src/index.ts --format cjs --dts && cp dist/index.js docs/eudgc.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

@@ -27,3 +27,5 @@ pnpm-debug.log*
 /src-cordova/www
 /public/cordova.js
 src-cordova/com.scopevisio.erp.server_cordova_build_templates_apk_sign.jks
+
+docs/eudgc.js
